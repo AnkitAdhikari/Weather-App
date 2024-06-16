@@ -1,0 +1,73 @@
+body {
+  background-color: #242424;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.current-weather-logo img {
+  width: 60px;
+}
+
+#search {
+  width: 100%;
+  height: 30px;
+  outline: none;
+  background-color: inherit;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+
+.search-bar {
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 30px;
+  overflow: hidden;
+  padding: 10px 15px;
+  background-color: #373737;
+}
+
+.icon {
+  font-size: 24px;
+  color: white;
+}
+
+.search-suggestion {
+  position: absolute;
+  top: 100%;
+  margin-top: 10px;
+  left: 0;
+  right: 0;
+  background-color: #373737;
+  color: white;
+  /* padding: 20px; */
+}
+
+.suggested-location {
+  margin: 10px 20px;
+  cursor: pointer;
+}
+
+.setting-logo-container {
+  height: 50px;
+  width: 50px;
+  background-color: #373737;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
