@@ -1,6 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #242424;
   font-family: "Poppins", sans-serif;
+  color: white;
 }
 .container {
   width: 1000px;
@@ -46,6 +53,9 @@ body {
   color: white;
 }
 
+.settings-container {
+  position: relative;
+}
 .search-suggestion {
   position: absolute;
   top: 100%;
@@ -54,10 +64,25 @@ body {
   right: 0;
   background-color: #373737;
   color: white;
-  /* padding: 20px; */
+  z-index: 9999;
 }
 
-.suggested-location {
+.settings-suggestion.hide {
+  display: none;
+}
+
+.settings-suggestion {
+  position: absolute;
+  top: 100%;
+  margin-top: 10px;
+  right: 0;
+  background-color: #373737;
+  color: white;
+  z-index: 9999;
+}
+
+.suggested-location,
+.suggested-unit {
   margin: 10px 20px;
   cursor: pointer;
 }
@@ -70,4 +95,194 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.general-weather-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.weather-headline {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.main-detail {
+  display: flex;
+}
+
+.min-max-detail {
+  display: flex;
+  gap: 50px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.min-temp {
+  display: flex;
+  gap: 5px;
+  height: fit-content;
+  align-items: center;
+}
+
+.max-temp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+}
+
+.feel-temp {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.temp {
+  font-size: 110px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.weather-main-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.weather-details {
+  padding: 10px 0px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  column-gap: 120px;
+}
+
+.brief-title {
+  margin-bottom: 20px;
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+.hourly-cards-container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.hourly-card {
+  background: #373737;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.hour-text {
+  padding-bottom: 5px;
+  font-weight: 500;
+}
+
+.small-text {
+  font-size: 0.8em;
+}
+
+.weather-icon {
+  user-select: none;
+  -webkit-user-drag: none;
+  height: 60px;
+  padding: 8px 0px;
+}
+
+.week-brief,
+.hourly-brief {
+  padding: 10px 20px;
+}
+
+.week-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.week-card {
+  background: #373737;
+  border-radius: 10px;
+  display: flex;
+  padding: 10px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  max-width: fit-content;
+  padding: 0px 10px;
+}
+
+.week-details-container {
+  flex: 1;
+  padding-left: 10px;
+}
+
+.icon-container img {
+  max-height: 100%;
+  width: 90px;
+}
+
+.date {
+  font-size: 0.88em;
+  text-transform: uppercase;
+}
+
+.day-name {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.date {
+  font-size: 0.88em;
+  text-transform: uppercase;
+}
+
+.temp-details {
+  justify-content: flex-start;
+  display: flex;
+}
+
+.temp-details .max {
+  margin-left: 20px;
+}
+
+.temp-details div .temp {
+  padding-top: 10px;
+  line-height: 24px;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+body.dark-theme .temp-label {
+  color: #b0afaf;
+}
+
+@media screen and (max-width: 1060px) {
+  .week-cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
