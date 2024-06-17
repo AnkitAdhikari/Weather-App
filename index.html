@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  <script defer src="index.bundle.js"></script></head>
+  <body>
+    <div class="container">
+      <div class="search-bar">
+        <div class="search-container">
+          <ion-icon name="search-sharp" class="icon"></ion-icon>
+          <input autocomplete="off" type="search" name="" id="search" />
+        </div>
+        <div class="search-suggestion"></div>
+        <div class="settings-container">
+          <div class="setting-logo-container">
+            <ion-icon
+              name="settings-sharp"
+              class="icon setting-icon"
+            ></ion-icon>
+          </div>
+          <div class="settings-suggestion hide">
+            <p class="temp-unit suggested-unit">Celsius</p>
+            <p class="speed-unit suggested-unit">KPH</p>
+          </div>
+        </div>
+      </div>
+      <div class="general-weather-container"></div>
+      <div class="hourly-brief">
+        <h3 class="brief-title text-dark">Hourly</h3>
+        <div class="hourly-cards-container"></div>
+      </div>
+      <div class="week-brief">
+        <h3 class="brief-title text-dark">This Week</h3>
+        <div class="week-cards-container"></div>
+      </div>
+    </div>
+  </body>
+</html>
